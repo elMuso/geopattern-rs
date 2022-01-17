@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GeoPattern WASM Demo</title>
     <script>
-        
+        function save(){
+            var ppp = document.getElementById("container");
+            var bi = ppp.style.backgroundImage.slice(4, -1).replace(/"/g, "");
+            document.getElementById("save").href=bi.replace("image/svg+xml", "image/svg");; 
+        }
         document.onload = function(){
             
         var yyy = document.getElementById("input");
@@ -16,10 +20,7 @@
         });
         };
         
-        function save(){
-            var ppp = document.getElementById("container");
-            document.getElementById("save").href=container.style.background.replace("image/svg+xml", "image/svg");; 
-        }
+        
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
