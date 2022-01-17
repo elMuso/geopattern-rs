@@ -11,7 +11,7 @@
             var bi = ppp.style.backgroundImage.slice(4, -1).replace(/"/g, "");
             document.getElementById("save").href=bi.replace("image/svg+xml", "image/svg");; 
         }
-        document.onload = function(){
+        window.onload = function() {
             
         var yyy = document.getElementById("input");
             yyy.addEventListener("keyup", () => {
