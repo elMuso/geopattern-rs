@@ -6,16 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GeoPattern WASM Demo</title>
     <script>
+        
         document.onload = function(){
-        var yyy = document.getElementById("inpus");
+            
+        var yyy = document.getElementById("input");
             yyy.addEventListener("keyup", () => {
-                var ppp = document.getElementById("container");
-            const image = _pkg__WEBPACK_IMPORTED_MODULE_0__["generate_base64_svg_string"](yyy.value);
-            ppp.style.background = `url("data:image/svg+xml;base64,${image}")`;
-            document.getElementById("save").href=container.style.background.replace("image/svg+xml", "image/svg");; 
+                setTimeout(save,120);
+                
         });
         };
-  };
+        
+        function save(){
+            var ppp = document.getElementById("container");
+            document.getElementById("save").href=container.style.background.replace("image/svg+xml", "image/svg");; 
+        }
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
@@ -65,7 +69,7 @@
     <div id="container">
         <div id="article">
             <p>
-                <input type="text" name="input" id="inpus" placeholder="type here to generate a pattern in real time">
+                <input type="text" name="input" id="input" placeholder="type here to generate a pattern in real time">
             </p>
             <p><a id="save" download='FileName' href="#">Save Pattern...</a>
             </p>
